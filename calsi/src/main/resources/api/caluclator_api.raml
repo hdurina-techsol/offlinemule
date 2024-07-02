@@ -1,0 +1,98 @@
+#%RAML 1.0
+title: Caluclator_api
+protocols:
+  - HTTP
+traits:
+  qpr : !include /Traits/trait.raml
+mediaType: 
+- application/json  
+
+/addition:
+  get:
+      is: [qpr]
+        
+      responses:
+            200:
+              body:
+               
+                 example:
+                      {
+                  "result": addition is 23
+                }
+
+/substraction:
+  delete:
+    is: [qpr]
+     
+    responses:
+      200:
+         body:
+          
+            example:
+              {
+                "result":"substraction is 54"
+              }
+
+/multiplication:
+  head:
+    is:
+      - qpr
+    responses:
+          200:
+            body:
+                
+                    example:
+                                  {
+                                    "result":"multiplication is 76"
+                                  }  
+
+/division:
+  patch:
+      is:
+        - qpr 
+      responses:
+            200:
+              body:
+                   
+                    example:
+                        
+                        {
+                          "result":"division is 32"
+                        }
+                                        
+                                                                                                                  
+          
+
+            
+          
+        
+              
+                                
+              
+                      
+
+                                 
+
+
+
+
+
+                                  
+
+                                    
+
+                                    
+                
+                              
+
+
+       
+             
+                                    
+               
+        
+                        
+                                                      
+              
+      
+                                              
